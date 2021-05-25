@@ -6,9 +6,12 @@ from hangman_art import stages, logo
 
 def clear():
   
-    # for windows
+# for windows
     if name == 'nt':
         _ = system('cls')
+# for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 random_word = random.choice(word_set)
 length = len(random_word)
